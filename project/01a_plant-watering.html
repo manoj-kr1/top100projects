@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automatic Plant Watering System</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>Automatic Plant Watering System</h1>
+  </header>
+     <header>
+   
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+	    <a href="list.html">Project List</a>
+    </nav>
+	  </header>
+<div class="banner">
+  <div class="banner-text">🚀 New Projects Added Weekly! Check out the latest DIY tutorials now!</div>
+</div>
+
+  </header>
+  <main>
+    <img src="../images/irf.jpg" class="main-img">
+    <p>This system waters plants using a soil moisture sensor, relay, and Arduino Uno.</p>
+    <h3>Components:</h3>
+
+<ul class="component-list">
+  <li>
+    <strong>Arduino Uno</strong><br>
+    Arduino is an open-source microcontroller platform used for building electronics projects.
+    In this system, we use the Arduino Uno to read soil moisture levels using a sensor. Based on the sensor reading, it controls a relay to turn a water pump on or off, watering the plant automatically.
+    This setup helps in maintaining plant health without manual effort.
+  </li>
+
+  <li>
+    <strong>Soil Moisture Sensor</strong><br>
+    Detects the moisture content in soil. Sends analog signals to Arduino to determine if watering is needed.
+  </li>
+
+  <li>
+    <strong>Relay Module</strong><br>
+    Acts as a switch controlled by Arduino to turn the water pump on or off based on sensor readings.
+  </li>
+
+  <li>
+    <strong>Water Pump</strong><br>
+    Delivers water to the plant when powered by the relay module.
+  </li>
+</ul>
+<h3>Procedure:</h3>
+
+<ol class="procedure-steps">
+  <li>Place the soil moisture sensor in the plant pot.</li>
+  <li>Connect the sensor’s analog output to A0 pin of Arduino Uno.</li>
+  <li>Connect the relay module’s IN pin to digital pin 8 of Arduino.</li>
+  <li>Connect the relay's output to the water pump (through external power).</li>
+  <li>Upload the Arduino code to the Uno board.</li>
+  <li>Power the system using a USB cable or battery.</li>
+</ol>
+
+<h4>Connection Diagram:</h4>
+<img src="../images/irf.jpg" alt="Wiring Diagram" class="connection-img">
+
+    <p><strong>Status:</strong> Working</p>
+  
+
+<div class="download-section">
+  <h3>Download Code:</h3>
+  <a href="01b_download-plant.html" class="download-button">Go to Download Page</a>
+</div>
+
+</main>
+</body>
+</html>
