@@ -182,6 +182,7 @@ nav a:hover {
 
 .download-button:hover {
   background-color: #0056b3;
+   padding-bottom: 60px;
 }
 /* Responsive tweaks for small screens */
 @media (max-width: 600px) {
