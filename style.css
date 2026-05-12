@@ -357,7 +357,7 @@ nav a:hover {
 /* ======================
    SMALL TAGS (Arduino, Relay etc)
    ====================== */
-.tag {
+/*.tag {
   display: inline-block;
   background: #dbe9ff;
   color: #003f88;
@@ -365,4 +365,245 @@ nav a:hover {
   border-radius: 4px;
   font-weight: bold;
   font-size: 14px;
+}*/
+
+/* =========================
+   MODERN HEADER
+   ========================= */
+
+.main-header {
+  background: #003f88;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-header nav a:hover {
+  color: #ffc107;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('images/bg.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background: #ffc107;
+  color: black;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-button:hover {
+  background: white;
+}
+
+/* =========================
+   SEARCH BAR
+   ========================= */
+
+.search-section {
+  margin: 30px auto;
+  text-align: center;
+}
+
+#searchInput {
+  width: 90%;
+  max-width: 500px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+/*footer {
+  background: #003f88;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}*/
+/* =========================
+   MODERN HEADER
+   ========================= */
+
+/*.main-header {
+  background: #003f88;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-header nav a:hover {
+  color: #ffc107;
+}*/
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+/*.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('images/bg.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  display: inline-block;
+  background: #ffc107;
+  color: black;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background: white;
+  transform: scale(1.05);
+}
+*/
+/* =========================
+   SEARCH BAR
+   ========================= */
+
+.search-section {
+  margin: 30px auto;
+  text-align: center;
+}
+
+#searchInput {
+  width: 90%;
+  max-width: 500px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* =========================
+   SECTION HEADING
+   ========================= */
+
+.section-heading {
+  text-align: center;
+  color: #003f88;
+  margin-top: 30px;
+  font-size: 32px;
+}
+
+/* =========================
+   MODERN FOOTER
+   ========================= */
+
+footer {
+  background: #003f88;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .main-header {
+    flex-direction: column;
+  }
+
+  .main-header nav {
+    margin-top: 10px;
+  }
+
+  .main-header nav a {
+    display: inline-block;
+    margin: 10px;
+  }
 }
