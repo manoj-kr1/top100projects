@@ -1,40 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>My DIY Project Hub</title>
+
+  <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My DIY Project Hub</title>
+
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-   <header>
-    <h1>My DIY Project Hub</h1>
+
+  <!-- HEADER -->
+
+  <header class="main-header">
+
+    <div class="logo">
+      ⚡ My DIY Project Hub
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-	  <a href="list.html">Project List</a>
+      <a href="list.html">Project List</a>
     </nav>
-  </header>
-<div class="banner">
-  <div class="banner-text">🚀 New Projects Added Weekly! Check out the latest DIY tutorials now!</div>
-</div>
 
+  </header>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <h1>Build Amazing Electronics Projects</h1>
+
+      <p>
+        Arduino • ESP32 • Sensors • Relay Projects • Automation • DIY Tutorials
+      </p>
+
+      <a href="projects.html" class="hero-button">
+        Explore All Projects
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- BANNER -->
+
+  <div class="banner">
+
+    <div class="banner-text">
+      🚀 New DIY Projects Added Weekly • Arduino • ESP32 • Automation • Sensors
+    </div>
+
+  </div>
+
+
+  <!-- SEARCH BAR -->
+
+  <section class="search-section">
+
+    <input type="text"
+           id="searchInput"
+           placeholder="Search Projects...">
+
+  </section>
+
+
+  <!-- PROJECTS -->
 
   <main>
-    <section class="hero">
-      <h2>Explore My Simple Electronics Projects</h2>
-      <p>Arduino, Sensors, Displays, and More</p>
-      <img src="images/project-banner.jpg" alt="Electronics Projects Banner">
-    </section>
 
-    <section class="about">
-      <h2>About This Website</h2>
-      <p>This website is created to showcase simple and educational DIY electronics projects using Arduino and basic components. Whether you're a student, hobbyist, or beginner, these projects help you understand real-world applications in a practical and engaging way.</p>
-    </section>
-	 <footer>
-    <p>&copy; 2025 Top-100-Projects. All rights reserved.</p>
-  </footer>
+    <h2 class="section-heading">
+      Latest Projects
+    </h2>
+
+    <div class="gallery" id="projectContainer">
+    </div>
+
   </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 My DIY Project Hub | Built with HTML, CSS & JavaScript
+    </p>
+
+  </footer>
+
+
+  <!-- PROJECT DATA -->
+
+  <script>
+
+    const latestProjects = [
+
+      {
+        title: "01 Automatic Plant Watering",
+        image: "all_project/01_plant_watering/plant_watering.jpg",
+        link: "all_project/01_plant_watering/plant_watering.html"
+      },
+
+      {
+        title: "02 IR-Based Light Control",
+        image: "images/irf.jpg",
+        link: "project/02a_ir-light-control.html"
+      },
+
+      {
+        title: "03 Temperature on LCD",
+        image: "images/irf.jpg",
+        link: "project/03a_temp-lcd.html"
+      },
+
+      {
+        title: "04 Fire Alarm System",
+        image: "images/irf.jpg",
+        link: "project/04a_fire-alarm.html"
+      },
+
+      {
+        title: "05 RFID Door Lock",
+        image: "images/irf.jpg",
+        link: "project/05a_rfid-lock.html"
+      }
+
+    ];
+
+
+    const projectContainer =
+      document.getElementById("projectContainer");
+
+
+    function displayProjects(projectList) {
+
+      projectContainer.innerHTML = "";
+
+      projectList.forEach(project => {
+
+        projectContainer.innerHTML += `
+
+          <div class="project-card">
+
+            <img src="${project.image}"
+                 alt="${project.title}">
+
+            <h3>${project.title}</h3>
+
+            <a href="${project.link}">
+              View Project
+            </a>
+
+          </div>
+
+        `;
+
+      });
+
+    }
+
+
+    displayProjects(latestProjects);
+
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+
+    searchInput.addEventListener("keyup", () => {
+
+      const searchText =
+        searchInput.value.toLowerCase();
+
+      const filteredProjects =
+        latestProjects.filter(project =>
+
+          project.title
+                 .toLowerCase()
+                 .includes(searchText)
+
+        );
+
+      displayProjects(filteredProjects);
+
+    });
+
+  </script>
+
 </body>
+
 </html>
