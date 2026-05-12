@@ -1,0 +1,368 @@
+/* ======================
+   GLOBAL RESET
+   ====================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ======================
+   BODY + PAGE ANIMATION
+   ====================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9eef5;
+  text-align: center;
+  font-size: 16px;
+
+  /* Smooth page load */
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================
+   HEADER + NAVBAR
+   ====================== */
+header {
+  background: #0056b3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-title {
+  margin: 0 0 10px 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(255,255,255,0.8);
+}
+
+.page-header {
+  background: #0056b3;   /* your new softer blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+/* ======================
+   HERO SECTION
+   ====================== */
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+  background: #cce5ff;
+  color: #000;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* ======================
+   PROJECT CARDS
+   ====================== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  flex: 1 1 200px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 0 5px gray;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.tag {
+  display: inline-block;
+  background-color: #003f88;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* ======================
+   IMAGES (HOVER EFFECT)
+   ====================== */
+.main-img,
+.connection-img {
+  transition: 0.3s ease;
+}
+
+.main-img:hover,
+.connection-img:hover {
+  transform: scale(1.05);
+}
+
+.main-img {
+  max-width: 500px;
+  display: block;
+  margin: auto;
+}
+
+.connection-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* ======================
+   ABOUT + CONTACT
+   ====================== */
+.about {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.contact {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px;
+}
+
+/* ======================
+   LISTS
+   ====================== */
+.component-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.component-list li {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.procedure-steps {
+  padding-left: 40px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* ======================
+   BANNER (SCROLL TEXT)
+   ====================== */
+.banner {
+  background-color: #ffc107;
+  color: #000;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+}
+
+.banner-text {
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { left: 100%; }
+  100% { left: -40%; }
+}
+
+/* ======================
+   DOWNLOAD BUTTONS
+   ====================== */
+.download-links {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+.download-links a,
+.download-button {
+  display: block;
+  margin: 12px auto;
+  padding: 12px;
+  width: 280px;
+  background: #0056b3;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.download-links a:hover,
+.download-button:hover {
+  background-color: #003f88;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: underline;
+  color: #007BFF;
+}
+
+/* ======================
+   PROJECT LIST PAGE
+   ====================== */
+.project-list {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.project-list h2 {
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+.project-list ul {
+  padding-left: 40px;
+  text-align: left;
+}
+
+.project-list li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.project-list a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+   MOBILE RESPONSIVE
+   ====================== */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background: #007BFF;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .download-links a,
+  .download-button,
+  .back-link {
+    width: 90%;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .banner-text {
+    font-size: 16px;
+  }
+
+  .component-list,
+  .procedure-steps {
+    padding-left: 15px;
+    font-size: 14px;
+    list-style-position: inside;
+  }
+}
+/* ======================
+   SECTION TITLE (Components)
+   ====================== */
+.section-title {
+  display: inline-block;
+  background: #0056b3;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* ======================
+   SMALL TAGS (Arduino, Relay etc)
+   ====================== */
+.tag {
+  display: inline-block;
+  background: #dbe9ff;
+  color: #003f88;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
